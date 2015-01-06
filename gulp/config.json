@@ -1,5 +1,6 @@
 {
   "vendor": [
+    "vendor/requirejs/require.js",
     "vendor/angular/angular.js"
   ]
 }

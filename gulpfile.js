@@ -7,7 +7,7 @@ var config = require('./gulp/config.json');
 
 gulp.task('sass', function() {
     gulp.src('./app/scss/*.scss')
-        .sourcemaps.init()
+        .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -18,7 +18,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('copy:vendor', function() {
-    gulp.src(config.vendor)
+    gulp.src(config.vendor,  { base: './vendor' })
         .pipe(gulp.dest('./build/vendor'));
 });
 
