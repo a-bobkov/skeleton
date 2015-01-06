@@ -1,3 +1,3 @@
-define([], function() {
-    console.log('ok, its fine');
+define(['angular'], function(angular) {
+    console.log(angular, 'ok, app.js is fine');
 });

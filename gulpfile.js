@@ -25,9 +25,12 @@ gulp.task('copy:vendor', function() {
 
 gulp.task('build:js', function() {
     requirejs({
-        name: 'app/main',
-        baseUrl: '.',
-        out: 'main.js'
+        baseUrl: './app',
+        include: 'config',
+        mainConfigFile: './app/config.js',
+        findNestedDependencies: true,
+        out: 'main.js',
+        exclude: ['angular']
     })
         .pipe(gulp.dest('build/app'))
 });
