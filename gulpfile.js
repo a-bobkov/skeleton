@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
+var requirejs = require('gulp-requirejs');
 
 var config = require('./gulp/config.json');
 
@@ -20,6 +21,15 @@ gulp.task('sass', function() {
 gulp.task('copy:vendor', function() {
     gulp.src(config.vendor,  { base: './vendor' })
         .pipe(gulp.dest('./build/vendor'));
+});
+
+gulp.task('build:js', function() {
+    requirejs({
+        name: 'app/main',
+        baseUrl: '.',
+        out: 'main.js'
+    })
+        .pipe(gulp.dest('build/app'))
 });
 
 gulp.task('default', function() {
