@@ -12,6 +12,4 @@ require.config({
     }
 });
 
-require(['app'], function(){
-    console.log('ok all');
-});
+require(['app']);

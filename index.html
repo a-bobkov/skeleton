@@ -2,11 +2,29 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Skeleton for client side application</title>
-    <link rel="stylesheet" href="build/styles/main.css"/>
+    <title>Skeleton for client-side application</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="build/styles/main.css">
 </head>
 <body>
+    <div>
+        <h1>Skeleton for client-side application</h1>
+        <p>Structure:</p>
+        <ul>
+            <li><b>app</b> - application core</li>
+            <li><b>build</b> - folder contains dev/prod bundled application</li>
+            <li><b>gulp</b> - tasks, configs for gulp</li>
+            <li><b>modules</b> - partials for application</li>
+            <li><b>vendor</b> - libs from bower</li>
+        </ul>
+        <h2>Build with Gulp:</h2>
+        <ul>
+            <li><code>gulp dev</code> bundled <b>development</b> environment</li>
+            <li><code>gulp</code> bundled <b>development</b> environment and run gulp.watch</li>
+            <li><code>gul prod</code> bundled <b>production</b> environment</li>
+        </ul>
 
+    </div>
     <script data-main="build/app/main" src="build/vendor/requirejs/require.js"></script>
 </body>
 </html>

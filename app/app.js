@@ -1,3 +1,5 @@
-define(['angular'], function(angular) {
-    console.log(angular, 'ok, app.js is fine');
+define(['angular', '../modules/users/main'], function(angular, User) {
+    var user = new User('Mark');
+
+    console.log('Hello ' + user.name);
 });
